@@ -9,4 +9,4 @@ jobs:
         run: |
           echo $PAT | docker login ghcr.io -u NevermindEverlong --password-stdin
         env:
-          CR_PAT: ${{ secrets.PAT }}
+          PAT: ${{ secrets.PAT }}
