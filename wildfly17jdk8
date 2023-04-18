@@ -6,6 +6,8 @@ ENV WILDFLY_VERSION 17.0.1.Final
 ENV WILDFLY_SHA1 eaef7a87062837c215e54511c4ada8951f0bd8d5
 ENV JBOSS_HOME /opt/jboss/wildfly
 
+LABEL org.opencontainers.image.source="https://github.com/NevermindEverlong/wildfly-docker"
+
 USER root
 
 # Add the WildFly distribution to /opt, and make wildfly the owner of the extracted tar content
