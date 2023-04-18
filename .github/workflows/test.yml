@@ -1,4 +1,4 @@
-name: publish
+name: publish-test
 on: [push]
 jobs:
   publish-hello-world-image:
