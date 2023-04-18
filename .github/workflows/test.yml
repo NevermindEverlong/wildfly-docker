@@ -15,5 +15,4 @@ jobs:
       - name: Build the Docker image
         run: |
           docker build . --tag ghcr.io/nevermindeverlong/wildfly17jdk8:latest -f wildfly17jdk8
-          docker run ghcr.io/nevermindeverlong/wildfly17jdk8:latest
           docker push ghcr.io/nevermindeverlong/wildfly17jdk8:latest
