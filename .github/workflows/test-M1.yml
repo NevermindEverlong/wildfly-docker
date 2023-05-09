@@ -25,6 +25,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: .
+          file: wildfly17jdk8-M1
           platforms: linux/arm64
           push: true
           tags: nevermindeverlong/wildfly17jdk8-m1:latest
