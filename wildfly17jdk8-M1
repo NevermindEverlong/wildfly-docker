@@ -1,4 +1,4 @@
-FROM --platform linux/arm64 arm64v8/centos:7
+FROM --platform=linux/arm64 arm64v8/centos:7 AS build
 
 RUN yum update -y && yum -y install xmlstarlet saxon augeas bsdtar unzip java-1.8.0-openjdk-devel && yum clean all
 RUN groupadd -r jboss -g 1000 && useradd -u 1000 -r -g jboss -m -d /opt/jboss -s /sbin/nologin -c "JBoss user" jboss &&     chmod 755 /opt/jboss
