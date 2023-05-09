@@ -14,5 +14,5 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build the Docker image
         run: |
-          docker build . --tag ghcr.io/nevermindeverlong/wildfly17jdk8-M1:latest -f wildfly17jdk8-M1
-          docker push ghcr.io/nevermindeverlong/wildfly17jdk8-M1:latest
+          docker build . --tag ghcr.io/nevermindeverlong/wildfly17jdk8-m1:latest -f wildfly17jdk8-M1
+          docker push ghcr.io/nevermindeverlong/wildfly17jdk8-m1:latest
