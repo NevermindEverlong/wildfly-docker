@@ -1,7 +1,7 @@
-name: publish-test
+name: publish-test-m1
 on: [push]
 jobs:
-  publish-hello-world-image:
+  publish-hello-world-image-m1:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
