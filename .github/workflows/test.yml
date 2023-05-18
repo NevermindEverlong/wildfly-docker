@@ -1,5 +1,9 @@
 name: publish-test
-on: [push, workflow_dispatch]
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "1 0 * * *"
 jobs:
   publish-hello-world-image:
     runs-on: ubuntu-latest
