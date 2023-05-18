@@ -1,9 +1,9 @@
 name: publish-test-m1
 on:
-  push:
+  #push:
   workflow_dispatch:
   schedule:
-    - cron: "1 0 * * *"
+    - cron: "1 0 1,10,20 * *"
 jobs:
   publish-hello-world-image-m1:
     runs-on: ubuntu-latest
