@@ -1,5 +1,5 @@
 name: publish-test
-on: [push]
+on: [push, workflow_dispatch]
 jobs:
   publish-hello-world-image:
     runs-on: ubuntu-latest
