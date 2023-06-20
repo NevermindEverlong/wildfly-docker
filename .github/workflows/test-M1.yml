@@ -33,3 +33,12 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: ghcr.io/nevermindeverlong/wildfly17jdk8-m1:latest
+
+      - name: Build and push WF17 JDK11
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: wildfly17jdk8-M1
+          platforms: linux/arm64
+          push: true
+          tags: ghcr.io/nevermindeverlong/wildfly17jdk11-m1:latest
