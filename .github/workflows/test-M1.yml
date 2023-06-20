@@ -38,7 +38,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: wildfly17jdk8-M1
+          file: wildfly17jdk11-M1
           platforms: linux/arm64
           push: true
           tags: ghcr.io/nevermindeverlong/wildfly17jdk11-m1:latest
