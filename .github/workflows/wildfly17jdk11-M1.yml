@@ -1,11 +1,11 @@
-name: publish-test-m1
+name: publish-wildfly17jdk11-M1
 on:
   #push:
   workflow_dispatch:
   schedule:
     - cron: "1 0 1,10,20 * *"
 jobs:
-  publish-hello-world-image-m1:
+  publish-wildfly17jdk11-M1:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
