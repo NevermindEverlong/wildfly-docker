@@ -1,11 +1,11 @@
-name: publish-wildfly23jdk11-MA
+name: publish-wildfly27jdk11-MA
 on:
   #push:
   workflow_dispatch:
   schedule:
     - cron: "1 0 1,10,20 * *"
 jobs:
-  publish-wildfly23jdk11-MA:
+  publish-wildfly27jdk11-MA:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -29,11 +29,11 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push WF23 JDK11
+      - name: Build and push WF17 JDK11
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: wildfly23jdk11-MA
+          file: wildfly27jdk11-MA
           platforms: linux/amd64,linux/arm64/v8
           push: true
-          tags: ghcr.io/nevermindeverlong/wildfly23jdk11:latest
+          tags: ghcr.io/nevermindeverlong/wildfly27jdk11:latest
