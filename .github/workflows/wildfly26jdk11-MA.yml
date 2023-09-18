@@ -29,7 +29,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push WF27 JDK11
+      - name: Build and push WF26 JDK11
         uses: docker/build-push-action@v4
         with:
           context: .
