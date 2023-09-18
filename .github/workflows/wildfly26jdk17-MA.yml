@@ -1,4 +1,4 @@
-name: publish-wildfly26jdk11-MA
+name: publish-wildfly26jdk17-MA
 on:
   #push:
   workflow_dispatch:
@@ -29,11 +29,11 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push WF26 JDK11
+      - name: Build and push WF26 JDK17
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: wildfly26jdk11-MA
+          file: wildfly26jdk17-MA
           platforms: linux/amd64,linux/arm64/v8
           push: true
-          tags: ghcr.io/nevermindeverlong/wildfly26jdk11:latest
+          tags: ghcr.io/nevermindeverlong/wildfly26jdk17:latest
