@@ -2,8 +2,8 @@ name: publish-wildfly26_1_3jdk11-temurin
 on:
   #push:
   workflow_dispatch:
-  schedule:
-    - cron: "1 0 1,10,20 * *"
+  #schedule:
+  #  - cron: "1 0 1,10,20 * *"
 jobs:
   wildfly26_1_3jdk11-temurin:
     runs-on: ubuntu-latest
