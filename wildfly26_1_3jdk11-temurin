@@ -11,8 +11,8 @@ WORKDIR /opt/jboss
 RUN addgroup --system jboss --gid 1000
 #RUN addgroup -S compax -g 1000
 #RUN useradd -u 1000 -r -g jboss -m -d /opt/jboss -s /sbin/nologin -c "JBoss user" jboss
-RUN adduser --system jboss --uid 1000  --group jboss --home /opt/jboss --shell /bin/false --comment "JBoss user"
-##RUN adduser -S jboss -G jboss -u 1000
+##RUN adduser --system jboss --uid 1000  --group jboss --home /opt/jboss --shell /bin/false --comment "JBoss user"
+RUN adduser -S jboss -G jboss -u 1000 --home /opt/jboss
 
 #RUN chmod 755 /opt/jboss
 RUN chmod 755 /opt/jboss
