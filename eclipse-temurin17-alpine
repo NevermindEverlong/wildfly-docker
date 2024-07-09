@@ -1,1 +1,13 @@
+FROM eclipse-temurin:17-alpine
 
+RUN  apk update \
+  && apk upgrade \
+  && apk add --update libstdc++ tzdata curl unzip bash ca-certificates freetype fontconfig msttcorefonts-installer \
+  && rm -rf /var/cache/apk/* \
+  && apk search --update \
+  && update-ms-fonts \
+  && fc-cache -f \
+  && rm -rf /var/cache/*
+
+ENV LANG C.UTF-8
+run echo "Europe/Berlin" > /etc/timezone
