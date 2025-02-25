@@ -34,6 +34,6 @@ jobs:
         with:
           context: .
           file: wildfly26_1_3jdk17-temurin
-          platforms: linux/amd64,linux/arm64/v8
+          platforms: linux/amd64
           push: true
           tags: ghcr.io/nevermindeverlong/wildfly26_1_3jdk17-temurin:latest
